@@ -1,0 +1,207 @@
+/* Global Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  /* Container and Background Image */
+  .container {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Ensure background image is behind other elements */
+  }
+  
+  /* Header */
+  header {
+    padding: 10px 5%;
+    position: relative;
+    width: 100%;
+    z-index: 1000; /* Ensure header is above background image */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    transition: all .50s ease;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .logo span {
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar a {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 150;
+    padding: 5px 0;
+    margin: 0px 30px;
+    transition: all .50s ease;
+  }
+  
+  .navbar a:hover {
+    color: wheat;
+  }
+  
+  .navbar .active {
+    color: wheat;
+  }
+  
+  /* Authentication Links */
+  .auth-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .auth-links a {
+    background-color: red;
+    color: white;
+    height: 30px;
+    padding: 3px;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all .50s ease;
+  }
+  
+  .auth-links a:hover {
+    background-color: rgb(133, 29, 29);
+  }
+  
+  /* Hamburger Menu */
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger-menu .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+  }
+  
+  /* Mobile Navigation Links */
+  .mobile-nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    border-radius: 10px;
+    transition: all .50s ease;
+  }
+  
+  .mobile-nav-links.open {
+    display: flex;
+  }
+  
+  .mobile-nav-links li {
+    margin: 12px 0;
+  }
+  
+  .mobile-nav-links a {
+    color: white;
+    padding: 10px 25px;
+    display: block;
+    transition: all .50s ease;
+  }
+  
+  .mobile-nav-links a:hover {
+    color: wheat;
+    transform: translate(5px);
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1280px) {
+    header {
+      padding: 14px 2%;
+    }
+    
+    .navbar a {
+      padding: 5px 0;
+      margin: 0px 20px;
+    }
+  }
+  
+  @media (max-width: 1090px) {
+    #menu-icon {
+      display: block;
+    }
+    
+    .navbar {
+      display: none;
+    }
+    
+    .hamburger-menu {
+      display: flex;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: #333;
+      padding: 20px;
+      display: none;
+    }
+    
+    .navbar li {
+      margin-bottom: 20px;
+    }
+    
+    .navbar a {
+      color: #fff;
+    }
+    
+    #menu-icon {
+      display: block;
+    }
+    
+    .navbar.open {
+      display: flex;
+    }
+  }
+  

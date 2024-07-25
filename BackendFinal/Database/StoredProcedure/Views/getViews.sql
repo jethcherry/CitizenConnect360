@@ -1,0 +1,7 @@
+USE CitizenConnect360;
+
+CREATE OR ALTER PROCEDURE getViews
+AS
+BEGIN
+    SELECT * FROM CitizenViews;
+END;

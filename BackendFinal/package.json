@@ -1,0 +1,42 @@
+{
+  "name": "backendfinal",
+  "version": "1.0.0",
+  "scripts": {
+    "start:build": "tsc -w",
+    "start:run": "nodemon dist/server.js",
+    "start": "concurrently npm:start:*"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/concurrently": "^7.0.0",
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^8.2.0",
+    "@types/ejs": "^3.1.5",
+    "@types/express": "^4.17.21",
+    "@types/joi": "^17.2.3",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/mssql": "^9.1.5",
+    "@types/node-cron": "^3.0.11",
+    "@types/nodemailer": "^6.4.15",
+    "@types/nodemon": "^1.19.6",
+    "@types/uuid": "^10.0.0",
+    "aws-sdk": "^2.1659.0",
+    "bcrypt": "^5.1.1",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "mssql": "^11.0.1",
+    "node-cron": "^3.0.3",
+    "nodecron": "^0.2.0",
+    "nodemailer": "^6.9.14",
+    "nodemon": "^3.1.4",
+    "uuid": "^10.0.0"
+  }
+}

@@ -1,0 +1,47 @@
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- <div class="container">
+<header>
+  <img src="header.jpg" alt="header" class="background-image"/>
+<div class="logo">
+  <div class="fa-sharp fa-solid fa-bars" id="menu-icon" (click)="toggle()"></div>
+  <a href="/dash-admin"><img src="logo.png" alt="logo" class="logo"><i><span>CitizenConnect360</span></i></a>
+ </div>
+ 
+ <div class="auth-links">
+  <a routerLink="signup" class="action-btn">Sign Up</a>
+</div>
+</header>
+</div>  -->
+<div class="sidebar">
+  <ul>
+    <li>
+      <header>Dashboard</header>
+    </li>
+    <hr>
+    <br>
+    <li>
+      <a routerLink="/cadmin" >
+        <i class="fa-regular fa-user"></i>
+        <span>Citizen</span>
+      </a>
+    </li>
+    <li>
+      <hr>
+    </li>
+    <li>
+      <a routerLink="/gadmin">
+        <i class="fa-solid fa-user-nurse"></i>
+        <span>Government Official</span>
+      </a>
+    </li>
+    <li>
+      <hr>
+    </li>
+    <li>
+      <a (click)="logout()">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        <span>Log Out</span>
+      </a>
+    </li>
+  </ul>
+</div>

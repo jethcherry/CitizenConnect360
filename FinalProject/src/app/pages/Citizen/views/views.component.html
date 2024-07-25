@@ -1,0 +1,56 @@
+<div class="background-image-container">
+  <h1><span>Citizen</span> Views</h1>
+  <hr>
+
+  <div class="card-row">
+    <div class="card" *ngFor="let view of views | async">
+      <img [src]="view.Image" alt="Image" class="card-image">
+      <div class="card-content">
+        <h2>{{ view.Title }}</h2>
+        <p>{{ view.Description }}</p>
+        <p>{{ view.Date }}</p>
+      </div>
+      <div class="card-buttons">
+        <button>View Details</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-card">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <h2>Upload View</h2>
+
+      <div>
+        <input type="text" formControlName="Image" class="btn" placeholder="Enter Image URL">
+        <div *ngIf="form.get('Image')?.touched && form.get('Image')?.invalid">
+          <small *ngIf="form.get('Image')?.errors?.['required']">Image URL is required.</small>
+        </div>
+      </div>
+
+      <div>
+        <input type="text" formControlName="Title" placeholder="Title">
+        <div *ngIf="form.get('Title')?.touched && form.get('Title')?.invalid">
+          <small *ngIf="form.get('Title')?.errors?.['required']">Title is required.</small>
+          <small *ngIf="form.get('Title')?.errors?.['minlength']">Title must be at least 3 characters long.</small>
+        </div>
+      </div>
+
+      <div>
+        <textarea formControlName="Description" placeholder="Description"></textarea>
+        <div *ngIf="form.get('Description')?.touched && form.get('Description')?.invalid">
+          <small *ngIf="form.get('Description')?.errors?.['required']">Description is required.</small>
+          <small *ngIf="form.get('Description')?.errors?.['minlength']">Description must be at least 10 characters long.</small>
+        </div>
+      </div>
+
+      <div>
+        <input type="text" formControlName="Date" placeholder="Date">
+        <div *ngIf="form.get('Date')?.touched && form.get('Date')?.invalid">
+          <small *ngIf="form.get('Date')?.errors?.['required']">Date is required.</small>
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="(addViewLoading$ | async)">Add View</button>
+    </form>
+  </div>
+</div>

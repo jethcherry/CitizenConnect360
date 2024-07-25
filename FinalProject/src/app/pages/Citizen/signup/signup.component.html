@@ -1,0 +1,62 @@
+<div class="card-view">
+  <div class="card-header">
+    <h1>Sign Up</h1>
+    <p>Already have an account? <a href="/login">Sign In</a></p>
+  </div>
+  <div class="card-content">
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" formControlName="Name" class="form-control">
+        <div *ngIf="signupForm.get('Name')?.invalid && (signupForm.get('Name')?.touched || submitted)" class="error-message">
+          Name is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" formControlName="Email" class="form-control">
+        <div *ngIf="signupForm.get('Email')?.invalid && (signupForm.get('Email')?.touched || submitted)" class="error-message">
+          Email is required and must be a valid email address.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" formControlName="Password" class="form-control">
+        <div *ngIf="signupForm.get('Password')?.invalid && (signupForm.get('Password')?.touched || submitted)" class="error-message">
+          Password is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="role">Role</label>
+        <select id="role" formControlName="Role" class="form-control">
+          <option value="Citizen">Citizen</option>
+          <option value="Government Official">Government Official</option>
+        </select>
+        <div *ngIf="signupForm.get('Role')?.invalid && (signupForm.get('Role')?.touched || submitted)" class="error-message">
+          Role is required.
+        </div>
+      </div>
+      <!-- <div class="form-group">
+        <input type="checkbox" id="terms" formControlName="Terms" class="form-check-input">
+        <label for="terms" class="form-check-label">
+          I agree to the <a href="/terms">Terms and Conditions</a>
+        </label>
+        <div *ngIf="signupForm.get('Terms')?.invalid && (signupForm.get('Terms')?.touched || submitted)" class="error-message">
+          You must agree to the terms and conditions.
+        </div>
+      </div> -->
+      <button type="submit" class="btn btn-red">Register</button>
+      <div *ngIf="error$ | async" class="error-message">
+        {{ error$ | async }}
+      </div>
+      <div *ngIf="registerSuccess$ | async" class="success-message">
+        {{ registerSuccess$ | async }}
+      </div>
+      <div *ngIf="registerLoading$ | async" class="loading-message">
+        Loading...
+      </div>
+    </form>
+  </div>
+</div>
+<br>
+<app-about-us></app-about-us>

@@ -1,0 +1,104 @@
+.incident-section {
+  max-width: 1400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: black;
+  border: 1px solid white;
+}
+.incident-form 
+{
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+
+}
+
+.incident-card .label{
+  color: black;
+
+}
+
+.incident-header h2 {
+  color: white;
+  text-align: center;
+}
+
+.hr {
+  border-top: 1px solid white;
+  margin-top: 20px;
+}
+
+.incident-templates {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+
+.incident-template {
+  align-items: center;
+  border-radius: 5px;
+  width: 100%;
+  margin: 30px;
+  background-color: white;
+  border: 1px solid white;
+  text-align: center;
+}
+
+.incident-template img {
+  width: 80%;
+  height: 130px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.incident-form {
+  margin-top: 20px;
+}
+
+.incident-form h3 {
+  color: white;
+}
+
+.incident-form label {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: black;
+}
+.incident-form input ,textarea
+{
+  background-color: rgb(194, 189, 189);
+  width: 80%;
+  border-radius: 5px solid white;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.incident-form textarea {
+  height: 100px;
+}
+.incident-header h2 {
+  color:white;
+}
+
+.incident-form button {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.incident-form button:hover {
+  background-color: darkred;
+}

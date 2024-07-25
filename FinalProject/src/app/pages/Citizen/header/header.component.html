@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CitizenConnect360</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <div class="container">
+    <img src="header.jpg" alt="header" class="background-image"/>
+
+    <header>
+      <div class="logo">
+        <a href="#"><img src="logo.png" alt="logo" class="logo-img"><span>CitizenConnect360</span></a>
+      </div>
+      
+      <ul class="navbar">
+        <li><a routerLink="home">Home</a></li>
+        <li><a routerLink="educate" *ngIf="authService.showStatus()">Educate</a></li>
+        <li *ngIf="authService.showStatus() "><a routerLink="views">Views</a></li>
+        <li *ngIf="authService.showStatus()"><a routerLink="polls">Polls</a></li>
+        <li><a routerLink="incidents" *ngIf="authService.showStatus()">Incidents</a></li>
+        <li><a routerLink="about" *ngIf="!authService.showStatus()">About Us</a></li>
+        <li><a routerLink="contact" *ngIf="!authService.showStatus()">Contact Us</a></li>
+      </ul>
+      
+
+      <div class="auth-links">
+        <a routerLink="signup" class="action-btn" *ngIf="!authService.showStatus()">Sign Up</a>
+        <a routerLink="login" class="action-btn" routerLinkActive="active" *ngIf="!authService.showStatus()">Sign In</a>
+        <a class="action-btn" *ngIf="authService.showStatus()" (click)="onLogOut()">Log Out</a>
+      </div>
+    </header>
+
+    <div class="hamburger-menu" id="menu-icon" (click)="toggleMenu()">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+    <ul class="mobile-nav-links" [ngClass]="{'open': isMenuOpen}">
+      <li><a routerLink='home' (click)="toggleMenu()">Home</a></li>
+      <li><a routerLink="educate" (click)="closeMenu()">Educate</a></li>
+      <li *ngIf="authService.showStatus() "><a routerLink="views1" (click)="closeMenu()">Views</a></li>
+      <li *ngIf="authService.showStatus() "><a routerLink="views" (click)="closeMenu()">Views</a></li>
+      <li *ngIf="authService.showStatus() "><a routerLink="polls" (click)="closeMenu()">Polls</a></li>
+      <li><a routerLink="incidents"  (click)="closeMenu()"*ngIf="authService.showStatus()">Incidents</a></li>
+      <li><a routerLink="about" (click)="closeMenu()">About Us</a></li>
+      <li><a routerLink="contact" (click)="closeMenu()">Contact Us</a></li>
+      <li><a routerLink="signup" (click)="closeMenu()" *ngIf="!authService.showStatus()">Sign Up</a></li>
+      <li><a routerLink="login" (click)="closeMenu()" *ngIf="!authService.showStatus()">Sign In</a></li>
+      <li><a routerLink="login" (click)="closeMenu()" *ngIf="!authService.showStatus()" (click)="onLogOut()">Log Out</a></li>
+    </ul>
+  </div>
+
+</body>
+</html>

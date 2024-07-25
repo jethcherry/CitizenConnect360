@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.polls-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 50px; 
+}
+
+.polls-container h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.polls-container hr {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.poll-card {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.poll-card label {
+    display: block;
+    margin-bottom: 5px;
+    color: grey;
+    text-align: center;
+}
+
+.poll-input {
+    width: calc(100% - 40px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto 10px auto;
+    background-color: #ccc;
+}
+
+.poll-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.poll-button {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100px;
+    margin: 0 5px;
+}
+
+.poll-button:hover {
+    background-color: #c00;
+}
+
+.action-button {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100px;
+    margin: 0 5px;
+}
+
+.action-button:hover {
+    background-color: #c00;
+}
+
+.poll-icons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.icon {
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.edit-icon:hover {
+    color: #007bff;
+}
+
+.delete-icon:hover {
+    color: #dc3545;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .polls-container {
+        padding: 15px;
+    }
+
+    .poll-card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .poll-button,
+    .action-button {
+        width: 80px;
+        padding: 8px;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .polls-container {
+        padding: 10px;
+    }
+
+    .polls-container h1 {
+        font-size: 20px;
+    }
+
+    .poll-input {
+        width: calc(100% - 20px);
+    }
+
+    .poll-button,
+    .action-button {
+        width: 70px;
+        padding: 6px;
+        margin: 5px;
+    }
+}

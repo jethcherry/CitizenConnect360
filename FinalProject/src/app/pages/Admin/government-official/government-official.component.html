@@ -1,0 +1,30 @@
+<div class="sidebar">
+    <app-dashboard></app-dashboard>
+  </div>
+  
+  <div class="user-list">
+    <div class="user-item" *ngFor="let user of users">
+      <div class="user-info">
+        <div class="info-row">
+          <label>Name:</label>
+          <h3>{{ user.name }}</h3>
+        </div>
+        <div class="info-row">
+          <label>Email:</label>
+          <p>{{ user.email }}</p>
+        </div>
+      </div>
+      <div class="user-actions">
+        <button (click)="editUser(user)" class="action-button">
+          <i class="fa-solid fa-pen"></i> Edit
+        </button>
+        <button (click)="deleteUser(user)" class="action-button">
+          <i class="fa-solid fa-trash"></i> Delete
+        </button>
+        <button (click)="approveUser(user)" class="action-button">
+          <i class="fa-solid fa-check"></i> Approve
+        </button>
+      </div>
+    </div>
+  </div>
+  

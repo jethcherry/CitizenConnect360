@@ -1,0 +1,14 @@
+
+
+CREATE TABLE Educate (
+    EducateId VARCHAR(255) PRIMARY KEY,
+    Query VARCHAR(255) NOT NULL,
+    Response VARCHAR(255),
+    IncidenceId VARCHAR(255) FOREIGN KEY REFERENCES Incident( IncidenceId),
+    ViewId VARCHAR(255) FOREIGN KEY REFERENCES CitizenViews( ViewId),
+    UserId VARCHAR(255) FOREIGN KEY REFERENCES Cnt360Users(UserId),
+    createdAt DATETIME DEFAULT GETDATE(),
+    isDeleted INT DEFAULT 0
+);
+
+

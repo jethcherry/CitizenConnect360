@@ -1,0 +1,7 @@
+USE CitizenConnect360;
+
+CREATE OR ALTER PROCEDURE getPolls
+AS
+BEGIN
+    SELECT * FROM Polls;
+END;

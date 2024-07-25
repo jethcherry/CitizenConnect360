@@ -1,0 +1,122 @@
+.background-image-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 50px;
+}
+
+.background-image-container h1 {
+  color: white;
+  font-size: 50px;
+  margin-left: 90px;
+}
+
+.background-image-container h1 span {
+  color: red;
+}
+
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: -10px;
+}
+
+.card {
+  width: calc(50% - 20px);
+  margin: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-image {
+
+  width: 80%;
+  height: 150px;
+  padding: 40px;
+
+}
+
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.card-buttons {
+  padding: 20px;
+
+}
+
+.card-buttons button {
+  height: 40px;
+  width: 130px;
+  background-color: red;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-buttons button:hover {
+  background-color: rgb(182, 36, 36);
+}
+
+.separator {
+  margin: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.form-card {
+  padding: 30px;
+  margin-top: 20px; /* Adjust margin as needed */
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.form-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.form-card input[type="file"],
+.form-card input[type="text"],
+.form-card textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.form-card button[type="submit"] {
+  padding: 10px 20px;
+  background-color: red;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-card button[type="submit"]:hover {
+  background-color: rgb(182, 36, 36);
+}

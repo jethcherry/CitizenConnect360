@@ -1,0 +1,63 @@
+<div class="poll-header">
+    <h2>Polls</h2>
+    <hr class="hr">
+  </div>
+  
+  <div class="poll-section">
+    <div class="poll-card">
+      <h3> Should recycling be mandatory in all cities?</h3>
+      <form [formGroup]="pollForm1" (ngSubmit)="submitPoll()">
+        <div class="options">
+          <label>
+            <input type="radio" formControlName="poll1" value="yes">
+            Yes
+          </label>
+          <label>
+            <input type="radio" formControlName="poll1" value="no">
+            No
+          </label>
+          <button type="submit" class="btn-submit">Vote</button>
+        </div>
+      </form>
+      <hr class="hr">
+      <div class="poll-results">
+        <div class="result-bar" style="width: 25%;"></div>
+        <div class="result-bar" style="width: 75%;"></div>
+        <div class="result-labels">
+          <span>No    -25%</span>
+          <br>
+          <span>Yes    -75%</span>
+        </div>
+      </div>
+      <hr class="hr">
+    </div>
+  
+    <div class="poll-card">
+      <h3>Should public transportation be free for all users?</h3>
+      <form [formGroup]="pollForm2" (ngSubmit)="submitPoll()">
+        <div class="options">
+          <label>
+            <input type="radio" formControlName="poll2" value="yes">
+            Yes
+          </label>
+          <label>
+            <input type="radio" formControlName="poll2" value="no">
+            No
+          </label>
+          <button type="submit" class="btn-submit">Vote</button>
+        </div>
+      </form>
+      <hr class="hr">
+      <div class="poll-results">
+        <div class="result-bar" style="width: 10%;"></div>
+        <div class="result-bar" style="width: 90%;"></div>
+        <div class="result-labels">
+          <span>No-10%</span>
+          <br>
+          <span>Yes-90%</span>
+        </div>
+      </div>
+      <hr class="hr">
+    </div>
+  </div>
+  

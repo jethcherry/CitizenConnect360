@@ -1,0 +1,94 @@
+
+
+.background-image-container {
+  position: relative;
+  background-size: cover;
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.background-image-container h3 {
+  top: 30px;
+  color: black;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.background-image-container hr {
+  width: 100%;
+  margin: 10px auto;
+  border: 1px solid #817777;
+}
+
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+
+.card-view {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 0 0 calc(45% - 20px);
+  margin: 20px; 
+  height: 200px;
+}
+
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.card-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.card-view h1 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.card-view p {
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.card-button {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-button:hover {
+  background-color: rgb(148, 79, 79);
+}
+
+@media (max-width: 768px) {
+  .card-view {
+    width: calc(100% - 60px); 
+    margin: 0 auto 20px auto; 
+  }
+
+  .card-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}

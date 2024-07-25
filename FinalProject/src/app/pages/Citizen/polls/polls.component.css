@@ -1,0 +1,87 @@
+.poll-section {
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
+    max-width: 1500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .poll-header h2 {
+    color: #333;
+    margin-left: 100px;
+  }
+  
+  .hr {
+    border-top: 1px solid #ccc;
+    margin-top: 10px;
+  }
+  
+  .poll-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .poll-card {
+    width: calc(50% - 20px);
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  
+  .poll-card h3 {
+    color: #555;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  .options label {
+    margin-bottom: 5px;
+  }
+  
+  .poll-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .result-label {
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #555;
+  }
+  
+  .result-bar {
+    width: 100%;
+    background-color: #3498db;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .btn-submit {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    width: 30%;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  .btn-submit:hover {
+    background-color: darkred;
+  }
