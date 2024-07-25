@@ -6,10 +6,7 @@
 
 - [Project Overview](#project-overview)
 - [Features](#features)
-- [Setup Instructions](#setup-instructions)
-- [Requirements](#requirements)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Project Overview
 
